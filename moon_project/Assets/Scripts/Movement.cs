@@ -5,7 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [SerializeField] float rotationSpeed = 100f;
-    [SerializeField] float thrust = 800f;
+    [SerializeField] float thrust = 700f;
     Rigidbody rb;
 
     // Start is called before the first frame update
@@ -22,7 +22,7 @@ public class Movement : MonoBehaviour
     }
 
     void processThrust() {
-        if (Input.GetKey(KeyCode.Space)) {
+        if (Input.GetKey(KeyCode.W)) {
             rb.AddRelativeForce(Vector3.up * thrust * Time.deltaTime);
         }
     }
